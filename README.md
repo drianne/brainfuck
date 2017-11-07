@@ -4,10 +4,10 @@
 </p>
 
 ## Contribuidores
-|Nome	|Matrícula	|
-|--|--|--|
-| Adrianne Alves da Silva| 16/0047595 |
-| Letícia de Souza | 15/0015160|
+| Nome	| Matrícula	|
+|--|--|
+| Adrianne Alves da Silva | 16/0047595 |
+| Letícia de Souza | 15/0015160 |
 
 
 ## Apresentação
@@ -41,8 +41,8 @@ char *ptr=array; |
 | < | --ptr; |
 | + | ++*ptr; |
 | - | --*ptr; |
-| . | putchar(*ptr); |
-| , | *ptr=getchar(); |
+| . | printf("%c \\n",(*ptr)); |
+| , | scanf("%c",ptr); |
 | [ | while (*ptr) { |
 | ] | } |
 
