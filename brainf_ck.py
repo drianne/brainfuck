@@ -1,8 +1,8 @@
 import click
 
 @click.command()
-@click.argument('brainf_ck')
-@click.argument('-o', nargs=1)
+@click.argument('brainf_ck',type=click.File('r'))
+@click.option('-o', nargs=1, type=click.File('w'))
 
 def cGenerator(brainf_ck, o):
 
