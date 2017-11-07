@@ -26,3 +26,7 @@ char *pointer = &tape[0];
 	for data in source:
 		if data in parseDictionary:
 			c_file = c_file + parseDictionary[data]
+			c_file = c_file + "return 0;\n"
+
+ o.write(c_file)
+ o.flush()
