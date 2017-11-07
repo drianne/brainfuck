@@ -26,7 +26,10 @@ char *pointer = &tape[0];
 	for data in source:
 		if data in parseDictionary:
 			c_file = c_file + parseDictionary[data]
-			c_file = c_file + "return 0;\n"
+	c_file = c_file + "return 0;\n"
 
- o.write(c_file)
- o.flush()
+	o.write(c_file)
+	o.flush()
+
+if __name__ == "__main__":
+    op = cGenerator()
