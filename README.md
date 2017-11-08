@@ -16,7 +16,7 @@ Este repositório apresenta um compilador da linguagem brainfuck desenvolvida em
 
 ## Sobre a Linguagem
 
-BrainFuck consiste em uma linguagem de programação hermética minimalista, ela foi criada em 1993 por Urban Müller, em 1993. O objetivo principal de seu desenvolvimento é realmente confundir os programadores, dessa forma, não é uma linguagem tão último para aplicações práticas. O seu alfabeto baseia-se nos seguintes caracteres:
+BrainFuck consiste em uma linguagem de programação hermética minimalista, ela foi criada em 1993 por Urban Müller. O objetivo principal de seu desenvolvimento é realmente confundir os programadores, dessa forma, não é uma linguagem tão últil para aplicações práticas. O seu alfabeto baseia-se nos seguintes caracteres:
 
 ### Caracteres
 
