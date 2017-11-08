@@ -10,33 +10,36 @@ def cGenerator(brainf_ck, o):
 
 # Dicionário analisador entre brainf_ck e c 
 
-	parseDictionary = {">": "  ++ptr; \n",
-	            "<": "  --ptr; \n",
-	            "+": "  ++(*ptr); \n",
-	            "-": "  --(*ptr); \n",
-	            ".": """    printf("%c \\n",(*ptr)); \n""",
-	            ",": """    scanf("%c",ptr); \n""",
-	            "[": """  while(*ptr) { \n""",
-	            "]": " \n}\n"}
+	parseDictionary = {">": "  ++ptr;",
+	            "<": "  --ptr;",
+	            "+": "  ++(*ptr);",
+	            "-": "  --(*ptr);",
+	            ".": """  printf("%c \\n",(*ptr));""",
+	            ",": """  scanf("%c",ptr);""",
+	            "[": """  while(*ptr) {""",
+	            "]": " }"}
 
 # Convertendo de brainfuck para código c
 
-	c_file = """
-
-#include<stdio.h>
+	c_file = """#include<stdio.h>
 int main(){
-char *tape = malloc(sizeof(char)*40000);
-char *pointer = &tape[0];
+	char *tape = malloc(sizeof(char)*40000);
+	char *pointer = &tape[0];
 """
+	line = '\n'
 
 	source = brainf_ck.read()
 	for data in source:
 		if data in parseDictionary:
-			c_file = c_file + parseDictionary[data]
-	c_file = c_file + "return 0;\n"
+			c_file = c_file + parseDictionary[data] + line
+	c_file = c_file + "return 0;"
 
-	o.write(c_file)
+	numBits = o.write(c_file)	
+	if numBits != 0:
+		print('C file was generated')
+	print('Bits number : {}' .format(numBits))
 	o.flush()
 
 if __name__ == "__main__":
-    op = cGenerator()
+    cGenerator()
+    
