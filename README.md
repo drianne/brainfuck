@@ -12,11 +12,13 @@
 
 ## Apresentação
 
-Este repositório apresenta um compilador da linguagem brainfuck desenvolvida em Python. Ele consiste em uma atividade apresentada como avaliação parcial da disciplina de Compiladores do curso de Engenharia de software da Universidade de Brasília (UnB), Campus de Engenharias - Faculdade do Gama (FGA). Objetiva-se, por meio deste, compilar código escrito em brainfuck obtendo como saída código em C.
+Este repositório apresenta uma atividade apresentada como avaliação parcial da disciplina de Compiladores do curso de Engenharia de software da UnB. O objetivo é compilar um código escrito em brainfuck obtendo como saída um código em C.
 
-## Sobre a Linguagem
+Para rodar o programa basta executar o seguinte comando:
 
-BrainFuck consiste em uma linguagem de programação hermética minimalista, ela foi criada em 1993 por Urban Müller. O objetivo principal de seu desenvolvimento é realmente confundir os programadores, dessa forma, não é uma linguagem tão últil para aplicações práticas. O seu alfabeto baseia-se nos seguintes caracteres:
+```shell
+$ python3 brainf_ck.py arquivo.bf -o saida.c
+```
 
 ### Caracteres
 
@@ -45,7 +47,3 @@ char *ptr=array; |
 | , | scanf("%c",ptr); |
 | [ | while (*ptr) { |
 | ] | } |
-
-## Como Contribuir
-
-Para contribuir com o desenvolvimento, é preciso que o colaborador crie o seu próprio Fork e envie um pull request com a contribuição para a branch master do projeto. As alterações serão analisadas e incorporadas ao compilador em caso de aprovação.

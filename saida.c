@@ -1,4 +1,5 @@
 
+
 #include<stdio.h>
 int main(){
 char *tape = malloc(sizeof(char)*40000);

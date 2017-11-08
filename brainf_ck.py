@@ -4,7 +4,11 @@ import click
 @click.argument('brainf_ck',type=click.File('r'))
 @click.option('-o', nargs=1, type=click.File('w'))
 
+# O comando click usado pra obter argumentos na linha de comando
+
 def cGenerator(brainf_ck, o):
+
+# Dicionário analisador entre brainf_ck e c 
 
 	parseDictionary = {">": "  ++ptr; \n",
 	            "<": "  --ptr; \n",
@@ -15,7 +19,10 @@ def cGenerator(brainf_ck, o):
 	            "[": """  while(*ptr) { \n""",
 	            "]": " \n}\n"}
 
+# Convertendo de brainfuck para código c
+
 	c_file = """
+
 #include<stdio.h>
 int main(){
 char *tape = malloc(sizeof(char)*40000);
